@@ -34,9 +34,18 @@
     <Filter Include="소스 파일\print">
       <UniqueIdentifier>{ff233ee8-3105-4d07-a22b-6e99cdda21d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\mysql">
+      <UniqueIdentifier>{5ba89565-e3ab-48ea-a113-a43172d4c5fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myhear.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DB.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="structure.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,14 +65,8 @@
     <ClCompile Include="compmakenum.c">
       <Filter>소스 파일\num</Filter>
     </ClCompile>
-    <ClCompile Include="playerchoice.c">
-      <Filter>소스 파일\choice</Filter>
-    </ClCompile>
     <ClCompile Include="scoreboradchoice.c">
       <Filter>소스 파일\choice</Filter>
-    </ClCompile>
-    <ClCompile Include="players.c">
-      <Filter>소스 파일\game</Filter>
     </ClCompile>
     <ClCompile Include="endscreen.c">
       <Filter>소스 파일\default</Filter>
@@ -92,8 +95,17 @@
     <ClCompile Include="textcolor.c">
       <Filter>소스 파일\print</Filter>
     </ClCompile>
-    <ClCompile Include="playersname.c">
-      <Filter>소스 파일\choice</Filter>
+    <ClCompile Include="insertscore.c">
+      <Filter>소스 파일\mysql</Filter>
+    </ClCompile>
+    <ClCompile Include="insertID.c">
+      <Filter>소스 파일\mysql</Filter>
+    </ClCompile>
+    <ClCompile Include="first.c">
+      <Filter>소스 파일\default</Filter>
+    </ClCompile>
+    <ClCompile Include="login.c">
+      <Filter>소스 파일\mysql</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -70,6 +70,16 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);C:\Program Files\MySQL\MySQL Server 5.7\include;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\Program Files\MySQL\MySQL Server 5.7\lib</LibraryPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath);</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);C:\Program Files\MySQL\MySQL Server 5.7\include;$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\Program Files\MySQL\MySQL Server 5.7\lib</LibraryPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath);</ExecutablePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -108,6 +118,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,16 +135,22 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="myhear.h" />
+    <ClInclude Include="DB.h" />
+    <ClInclude Include="structure.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ballcheck.c" />
     <ClCompile Include="choicecontinue.c" />
     <ClCompile Include="compmakenum.c" />
-    <ClCompile Include="playersname.c" />
+    <ClCompile Include="first.c" />
+    <ClCompile Include="insertID.c" />
+    <ClCompile Include="insertscore.c" />
+    <ClCompile Include="login.c" />
     <ClCompile Include="strikeballborad.c" />
     <ClCompile Include="endscreen.c" />
     <ClCompile Include="gotoxy.c" />
@@ -143,9 +160,7 @@
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</SDLCheck>
     </ClCompile>
     <ClCompile Include="myfunction.h" />
-    <ClCompile Include="playerchoice.c" />
     <ClCompile Include="playergame.c" />
-    <ClCompile Include="players.c" />
     <ClCompile Include="scoreboard.c" />
     <ClCompile Include="scoreboradchoice.c" />
     <ClCompile Include="strikecheck.c" />

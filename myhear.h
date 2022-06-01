@@ -3,3 +3,4 @@
 #include <stdlib.h>  //srand,rand,system,
 #include <time.h>    //time
 #include <Windows.h> //gotoxy
+#include <mysql.h>	 //mysql¿¬µ¿

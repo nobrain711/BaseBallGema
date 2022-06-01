@@ -12,5 +12,9 @@ int ballcheck(int, int, int, int, int, int);	// ball을 세는 함수
 void choicecontinue(int*);						// 게임 종료 후 계속 진행을 할 것 인지 문는 함수
 void scoreboard(int, char*);					// 게임의 종료 후 현재까지 한 정보를 보여주는 함수
 void gotoxy(int, int);							// 콘솔창 위치 지정
-void strikeballborad(void);
-void textcolor(int);
+void strikeballborad(void);						// 스트라이크 카운트 표시
+void textcolor(int);							// 글자 색 변경
+void insertscore(int, char*);					// 점수 입력
+void insertID(void);							// 회원가입
+void first(void);								// 첫 화면
+void login(void);

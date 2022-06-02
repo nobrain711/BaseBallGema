@@ -8,8 +8,8 @@ typedef struct SCORE {
 	int totalcount;
 }score;
 
-typedef struct USER {
+typedef struct _USER {
 	//게임에서 사용자 정보를 구조체에 저장
-	char ID[5];
-	char PW[4];
+	char ID[10];
+	char PW[8];
 }user;

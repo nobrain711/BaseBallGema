@@ -1,5 +1,6 @@
 #include "myhear.h"
 
+
 void menu(int* n) {
 	//안내문이랑 크기를 같게 설정
 	system("mode con: cols=38 lines=20");
@@ -30,6 +31,7 @@ void menu(int* n) {
 			system("cls");
 			continue;
 		}
+	
 		else {
 			return;//main으로 다시 돌려보낸다
 		}

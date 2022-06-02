@@ -1,16 +1,20 @@
 #include "myfunction.h"
+#include "structure.h"
+#include "myhear.h"
 
 int main(void) {
 	int choice = 0;//입력 받을 숫자 생성
-	insertID();
-	//first();	//처음 접속시 로그인 및 회원가입 창으로 안내
+	user* u = malloc(sizeof(user));	//player 관련한 정보
+
+	first(&choice);		//처음 접속시 로그인 및 회원가입 창으로 안내
+	login(u, &choice);	//회원가입이나 로그인 창으로 전환
 
 	//while(1){
 	//	menu(&choice);//meun로 넘겨 주고 숫자 choice의 주소도 넘겨줌
 	//	
 	//	switch (choice){//choice기점으로 선택
 	//	case 1:
-	//		playerchoice();//게임 실행
+	//		playergame();//게임 실행
 	//		break;
 	//	
 	//	case 2:

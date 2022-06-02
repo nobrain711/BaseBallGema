@@ -148,7 +148,6 @@
     <ClCompile Include="choicecontinue.c" />
     <ClCompile Include="compmakenum.c" />
     <ClCompile Include="first.c" />
-    <ClCompile Include="insertID.c" />
     <ClCompile Include="insertscore.c" />
     <ClCompile Include="login.c" />
     <ClCompile Include="strikeballborad.c" />

@@ -98,9 +98,6 @@
     <ClCompile Include="insertscore.c">
       <Filter>소스 파일\mysql</Filter>
     </ClCompile>
-    <ClCompile Include="insertID.c">
-      <Filter>소스 파일\mysql</Filter>
-    </ClCompile>
     <ClCompile Include="first.c">
       <Filter>소스 파일\default</Filter>
     </ClCompile>

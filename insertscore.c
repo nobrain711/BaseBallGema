@@ -1,7 +1,8 @@
 #include "myhear.h"
 #include "DB.h"
+#include "structure.h"
 
-void insertscore(int s, char* n) {
+void insertscore(user* u, score* s) {
 	MYSQL mysql;
 	MYSQL* connection = NULL;
 	char query[255] = { 0 };
@@ -12,7 +13,7 @@ void insertscore(int s, char* n) {
 	connection = mysql_real_connect(&mysql, DBHOST, USER, PASSWD, DBNAME, PORT, (char*)NULL, 0);
 	
 	//점수 입력
-	sprintf(query, "insert into score values" "('%s', '%d')", n, s);
+	sprintf(query, "insert into scores (id, score) values" "('%s', %d)", u->ID, s->totalcount);
 
 	mysql_query(connection, query);
 

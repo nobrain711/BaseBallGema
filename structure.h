@@ -1,7 +1,7 @@
 #pragma once
 typedef struct SCORE {
 	//게임에서 필요한 변수를 구조체로 저장
-	int strick; 
+	int strike;
 	int ball;
 	int out;
 	int count;

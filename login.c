@@ -22,17 +22,21 @@ void login(user* u, int* c ) {
 		fprintf(stderr, "error : %s", mysql_error(&conn));
 	}
 
+	getchar();
+	
 	if ((*c) == 2) {
 		while(1) {
-			printf("아이디(다섯글자) : ");
+			system("cls");
+			puts("\n\n\t★☆ 회원 가입 ☆★ ");
+			printf("\n   아이디(다섯글자) : ");
 			fgets(u->ID, 10, stdin);
 			CHOP(u->ID);
 
-			printf("비밀번호(네 글자) : ");
+			printf("\n   비밀번호(네 글자) : ");
 			fgets(u->PW, 8, stdin);
 			CHOP(u->PW);
 
-			sprintf(query, "insert into login values" "('%s','%s')", u->ID, u->PW);
+			sprintf(query, "insert into user values" "('%s','%s')", u->ID, u->PW);
 
 			query_stat = mysql_query(connection, query);
 
@@ -41,19 +45,22 @@ void login(user* u, int* c ) {
 				return;
 			}
 			else {
-				puts("아이디가 중복되었습니다.");
-				puts("다시 입력해 주세요");
+				puts("\n\t아이디가 중복되었습니다.");
+				puts("\n\t다시 입력해 주세요");
+				Sleep(1000);
 			}
 		}
 	}
 
 	else {
 		while (1) {
-			printf("아이디(다섯글자) : ");
+			system("cls");
+			puts("\n\n\t ★☆  로그인  ☆★ ");
+			printf("\n   아이디(다섯글자) : ");
 			fgets(u->ID, 10, stdin);
 			CHOP(u->ID);
 
-			printf("비밀번호(네 글자) : ");
+			printf("\n   비밀번호(네 글자) : ");
 			fgets(u->PW, 8, stdin);
 			CHOP(u->PW);
 
@@ -61,18 +68,18 @@ void login(user* u, int* c ) {
 			
 			query_stat = mysql_query(connection, query);
 
-			if (query_stat != 0) {
-				puts("아이디하고 비밀번호가 틀렸습니다.");
-				puts("다시 입력해 주세요");;
-			}
-			
 			result = mysql_store_result(connection);
 
 			while ((row = mysql_fetch_row(result)) != NULL) {
-				puts("로그인 성공");
+				puts("\n\t로그인 성공");
+				Sleep(1000);
 				mysql_close(connection);
 				return;
 			}
+
+			puts("\n  아이디하고 비밀번호가 틀렸습니다.");
+			puts("\n\t다시 입력해 주세요");
+			Sleep(1000);
 		}
 	}
 }

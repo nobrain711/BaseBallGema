@@ -1,21 +1,15 @@
 #include "myhear.h"
+#include "structure.h"
 
-void scoreboard(int count, char* player) {
+void scoreboard(user* u, score* s) {
 	system("mode con: cols=42 lines=12");
-	if (player == NULL) {
+
 		puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		puts("┃     ★☆   player   score   ☆★      ┃");
+      printf("┃     ★☆   %s   score   ☆★       ┃\n",u->ID);
 		puts("┃                                       ┃");
-	  printf("┃     ★☆    투구 수 : %2d    ☆★      ┃\n", count);
+	  printf("┃     ★☆    투구 수 : %2d    ☆★      ┃\n", s->totalcount);
 		puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 		system("pause");
-	}
-	else {
-		puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		printf("┃     ★☆    %s     sorce   ☆★     ┃\n", player);
-		puts("┃                                       ┃");
-		printf("┃     ★☆    투구 수 : %d     ☆★     ┃\n", count);
-		puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
-		system("pause");
-	}
+
+	
 }

@@ -32,7 +32,7 @@ void first(int* c) {
 			continue;
 		}
 		else if ((*c) == 3) {
-			endscreen();
+			endscreen(NULL,NULL);
 		}
 		else {
 			return;

@@ -14,7 +14,7 @@ void insertscore(user* u, score* s) {
 	
 	//점수 입력
 	CHOP(u->ID);
-	sprintf(query, "insert into scores (id, score) values" "('%s', %d)", u->ID, s->totalcount);
+	sprintf(query, "insert into scores (id, score) values" "('%s',%d)", u->ID, s->totalcount);
 
 	mysql_query(connection, query);
 

@@ -34,7 +34,7 @@ void ranking(void) {
 			 i++;
 			 r++;
 			 if (r != 12) {
-				 printf("早      %2d     %s          %s      早\n", i, row[0], row[1]);
+				 printf("早      %3d     %4s      %5s      早\n", i, row[0], row[1]);
 			 }
 			 else {
 				 puts("早                                   早");
@@ -47,7 +47,7 @@ void ranking(void) {
 				 puts("早                                   早");
 				 puts("早     rank      id       score      早");
 				 puts("早                                   早");
-				 printf("早      %2d     %s          %s      早\n", i, row[0], row[1]);
+				 printf("早      %3d     %4s      %5s      早\n", i, row[0], row[1]);
 			 }
 		 }
 	puts("早                                   早");

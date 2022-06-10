@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="count.h" />
     <ClInclude Include="myhear.h" />
     <ClInclude Include="DB.h" />
     <ClInclude Include="structure.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ballboard.c" />
     <ClCompile Include="ballcheck.c" />
     <ClCompile Include="choicecontinue.c" />
     <ClCompile Include="compmakenum.c" />
@@ -151,6 +153,7 @@
     <ClCompile Include="insertscore.c" />
     <ClCompile Include="login.c" />
     <ClCompile Include="myranking.c" />
+    <ClCompile Include="outboard.c" />
     <ClCompile Include="ranking.c" />
     <ClCompile Include="strikeballborad.c" />
     <ClCompile Include="endscreen.c" />
@@ -164,6 +167,7 @@
     <ClCompile Include="playergame.c" />
     <ClCompile Include="scoreboard.c" />
     <ClCompile Include="scoreboradchoice.c" />
+    <ClCompile Include="strikeboard.c" />
     <ClCompile Include="strikecheck.c" />
     <ClCompile Include="textcolor.c" />
     <ClCompile Include="userinputnum.c" />

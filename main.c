@@ -5,7 +5,7 @@
 int main(void) {
 	int choice = 0;//입력 받을 숫자 생성
 	user* u = malloc(sizeof(user));	//player 관련한 정보
-
+	
 	first(&choice);		//처음 접속시 로그인 및 회원가입 창으로 안내
 	login(u, &choice);	//회원가입이나 로그인 창으로 전환
 
@@ -25,6 +25,6 @@ int main(void) {
 			endscreen(u,NULL);//게임 종료
 		}
 	}
-	//strikeballborad();
+
 	return 0;
 }

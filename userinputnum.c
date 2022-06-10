@@ -1,9 +1,9 @@
 #include "myhear.h"
 
-void userinputnum(int* n1, int* n2, int* n3) {
+void userinputnum(int* n1, int* n2, int* n3, int* ln) {
 	
 	while (1) {
-		printf("1부터 9까지의 서로 다른 정수 3개를 입력해 주세요 : ");//입력 받은 안내문 출력
+		printf("숫자 입력 : ");//입력 받은 안내문 출력
 		scanf("%d %d %d", n1, n2, n3);//n1,n2,n3의 주소에 직접입력
 
 		//비슷한 정수가 잇으면 다시 입력하게 해준다
@@ -23,6 +23,7 @@ void userinputnum(int* n1, int* n2, int* n3) {
 		}
 
 		//아무런 문제가 없으면 함수를 종료한다
+		ln++;
 		return;
 	}
 }

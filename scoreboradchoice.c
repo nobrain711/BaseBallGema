@@ -42,7 +42,7 @@ void scoreboradchoice(user* u) {
 				break;
 
 			case 2://승률 조회 페이지
-				myranking(u);
+				myranking();
 				break;
 			
 			case 3://메인 메뉴로 돌려보낸다

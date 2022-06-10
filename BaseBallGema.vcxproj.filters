@@ -25,9 +25,6 @@
     <Filter Include="소스 파일\num">
       <UniqueIdentifier>{96e575ff-0b56-4dee-8b7b-48f5afc18582}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\choice">
-      <UniqueIdentifier>{d03505f1-adc9-4da0-88dd-10922ab6469b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\check">
       <UniqueIdentifier>{bcbb5054-7613-4375-8a40-7345c440db1e}</UniqueIdentifier>
     </Filter>
@@ -36,6 +33,9 @@
     </Filter>
     <Filter Include="소스 파일\mysql">
       <UniqueIdentifier>{5ba89565-e3ab-48ea-a113-a43172d4c5fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ranking">
+      <UniqueIdentifier>{8f819122-8453-407b-afd0-8bcf70f94a45}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +46,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="structure.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="count.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,9 +68,6 @@
     <ClCompile Include="compmakenum.c">
       <Filter>소스 파일\num</Filter>
     </ClCompile>
-    <ClCompile Include="scoreboradchoice.c">
-      <Filter>소스 파일\choice</Filter>
-    </ClCompile>
     <ClCompile Include="endscreen.c">
       <Filter>소스 파일\default</Filter>
     </ClCompile>
@@ -79,9 +79,6 @@
     </ClCompile>
     <ClCompile Include="userinputnum.c">
       <Filter>소스 파일\num</Filter>
-    </ClCompile>
-    <ClCompile Include="choicecontinue.c">
-      <Filter>소스 파일\choice</Filter>
     </ClCompile>
     <ClCompile Include="scoreboard.c">
       <Filter>소스 파일\scoreborad</Filter>
@@ -104,10 +101,25 @@
     <ClCompile Include="login.c">
       <Filter>소스 파일\mysql</Filter>
     </ClCompile>
+    <ClCompile Include="myranking.c">
+      <Filter>소스 파일\ranking</Filter>
+    </ClCompile>
     <ClCompile Include="ranking.c">
+      <Filter>소스 파일\ranking</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboradchoice.c">
+      <Filter>소스 파일\scoreborad</Filter>
+    </ClCompile>
+    <ClCompile Include="choicecontinue.c">
+      <Filter>소스 파일\game</Filter>
+    </ClCompile>
+    <ClCompile Include="ballboard.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="myranking.c">
+    <ClCompile Include="strikeboard.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="outboard.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

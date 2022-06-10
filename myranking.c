@@ -2,7 +2,7 @@
 #include "myhear.h"
 #include "myfunction.h"
 
-void myranking(user* u) {
+void myranking(void) {
 	//DB연동 준비
 	// mysql 구조체 변수 설정
 	MYSQL* connection = NULL;	//포인트 변수
@@ -34,7 +34,7 @@ void myranking(user* u) {
 			 i++;
 			 r++;
 			 if (r != 12) {
-				 printf("┃      %2d     %4s        %5s     ┃\n", i, row[0], row[1]);
+				 printf("┃      %3d     %4s      %5s      ┃\n", i, row[0], row[1]);
 			 }
 			 else {
 				 puts("┃                                   ┃");

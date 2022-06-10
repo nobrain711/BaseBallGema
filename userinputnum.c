@@ -1,9 +1,12 @@
 #include "myhear.h"
+#include "myfunction.h"
 
 void userinputnum(int* n1, int* n2, int* n3, int* ln) {
 	
 	while (1) {
+		gotoxy(50, ln);
 		printf("숫자 입력 : ");//입력 받은 안내문 출력
+		gotoxy(50, ln);
 		scanf("%d %d %d", n1, n2, n3);//n1,n2,n3의 주소에 직접입력
 
 		//비슷한 정수가 잇으면 다시 입력하게 해준다

@@ -18,7 +18,7 @@ int main(void) {
 			break;
 		
 		case 2:
-			scoreboradchoice();//점수 조회
+			scoreboradchoice(u);//점수 조회
 			break;
 
 		default:

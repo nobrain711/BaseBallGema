@@ -150,6 +150,7 @@
     <ClCompile Include="first.c" />
     <ClCompile Include="insertscore.c" />
     <ClCompile Include="login.c" />
+    <ClCompile Include="myranking.c" />
     <ClCompile Include="ranking.c" />
     <ClCompile Include="strikeballborad.c" />
     <ClCompile Include="endscreen.c" />

@@ -1,7 +1,8 @@
 #include "myhear.h"
 #include "myfunction.h"
+#include "structure.h"
 
-void scoreboradchoice(void) {
+void scoreboradchoice(user* u) {
 	int choice = 0;//선택받을 공간 생성
 	system("mode con: cols=38 lines=20");//안내문이랑 크기를 같게 설정
 
@@ -41,10 +42,7 @@ void scoreboradchoice(void) {
 				break;
 
 			case 2://승률 조회 페이지
-				system("cls");
-				printf("승률 조회 페이지");
-				Sleep(1000);
-				system("cls");
+				myranking(u);
 				break;
 			
 			case 3://메인 메뉴로 돌려보낸다

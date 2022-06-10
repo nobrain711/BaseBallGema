@@ -2,7 +2,7 @@
 #include "myhear.h"
 #include "myfunction.h"
 
-void ranking(void) {
+void myranking(user* u) {
 	//DB연동 준비
 	// mysql 구조체 변수 설정
 	MYSQL* connection = NULL;	//포인트 변수
@@ -17,7 +17,7 @@ void ranking(void) {
 
 	connection = mysql_real_connect(&conn, DBHOST, USER, PASSWD, DBNAME, PORT, (char*)NULL, 0);
 
-	sprintf(query, "SELECT	id, score FROM scores ORDER BY score");
+	sprintf(query, "SELECT	id, round(score/3,1) FROM scores ORDER BY score");
 
 	mysql_query(connection, query);
 
@@ -34,7 +34,7 @@ void ranking(void) {
 			 i++;
 			 r++;
 			 if (r != 12) {
-				 printf("┃      %2d     %s          %s      ┃\n", i, row[0], row[1]);
+				 printf("┃      %2d     %4s        %5s     ┃\n", i, row[0], row[1]);
 			 }
 			 else {
 				 puts("┃                                   ┃");
@@ -47,7 +47,7 @@ void ranking(void) {
 				 puts("┃                                   ┃");
 				 puts("┃     rank      id       score      ┃");
 				 puts("┃                                   ┃");
-				 printf("┃      %2d     %s          %s      ┃\n", i, row[0], row[1]);
+				 printf("┃      %2d     %4s        %5s     ┃\n", i, row[0], row[1]);
 			 }
 		 }
 	puts("┃                                   ┃");

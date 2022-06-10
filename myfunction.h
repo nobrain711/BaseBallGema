@@ -2,7 +2,7 @@
 #include "structure.h"
 
 void menu(int*);								// 메뉴출력하고 선택하는 함수
-void scoreboradchoice(void);					// 점수판을 점수판 승률을 나타낸는 함수
+void scoreboradchoice(user*);					// 점수판을 점수판 승률을 나타낸는 함수
 void endscreen(user*, score*);					// 프로그램을 종료하는 함수
 void playergame(user*);							// 1인용 게임하는 함수
 void compmakenum(int*, int*, int*);				// 컴퓨터가 숫자를 생성하는 함수
@@ -18,3 +18,4 @@ void insertscore(user*, score*);				// 점수 입력
 void first(int*);								// 첫 화면
 void login(user*, int*);						// DB에서 회원관련
 void ranking(void);								// 랭킹 조회
+void myranking(user*);							// 로그인된 아이디 랭킹 조회

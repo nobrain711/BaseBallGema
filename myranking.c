@@ -17,7 +17,7 @@ void myranking(void) {
 
 	connection = mysql_real_connect(&conn, DBHOST, USER, PASSWD, DBNAME, PORT, (char*)NULL, 0);
 
-	sprintf(query, "SELECT	id, round(score/3,1) FROM scores ORDER BY score");
+	sprintf(query, "SELECT	id, TRIM(ROUND(SUM(score)/3,2)) FROM scores GROUP BY id ORDER BY 2");
 
 	mysql_query(connection, query);
 

@@ -149,6 +149,7 @@
     <ClCompile Include="ballcheck.c" />
     <ClCompile Include="choicecontinue.c" />
     <ClCompile Include="compmakenum.c" />
+    <ClCompile Include="DeleteSpace.c" />
     <ClCompile Include="first.c" />
     <ClCompile Include="insertscore.c" />
     <ClCompile Include="login.c" />

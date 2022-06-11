@@ -17,7 +17,7 @@ void ranking(void) {
 
 	connection = mysql_real_connect(&conn, DBHOST, USER, PASSWD, DBNAME, PORT, (char*)NULL, 0);
 
-	sprintf(query, "SELECT	id, score FROM scores ORDER BY score");
+	sprintf(query, "SELECT	id, TRIM(score) FROM scores ORDER BY score");
 
 	mysql_query(connection, query);
 

@@ -21,3 +21,4 @@ void myranking(void);							// 로그인된 아이디 랭킹 조회
 void ballboard(score*);
 void strikeboard(score*);
 void outboard(score*);
+char* DeleteSpace(char);

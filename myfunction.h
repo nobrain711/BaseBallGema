@@ -22,3 +22,4 @@ void ballboard(score*);
 void strikeboard(score*);
 void outboard(score*);
 char* DeleteSpace(char);
+void linesdraw(int);

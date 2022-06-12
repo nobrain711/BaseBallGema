@@ -24,36 +24,28 @@ void ranking(void) {
 	result = mysql_store_result(connection);
 
 	system("cls");
+	linesdraw(5);
 
-		 puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		 puts("┃     ★☆ score  ranking ☆★      ┃");
-		 puts("┃                                   ┃");
-		 puts("┃     rank      id       score      ┃");
-		 puts("┃                                   ┃");
-		 while ((row = mysql_fetch_row(result)) != NULL) {
-			 i++;
-			 r++;
-			 if (r != 12) {
-				 printf("┃      %3d     %4s      %5s      ┃\n", i, row[0], row[1]);
-			 }
-			 else {
-				 puts("┃                                   ┃");
-				 puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
-				 r = 0;
-				 system("pause");
-				 system("cls");
-				 puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-				 puts("┃     ★☆ score  ranking ☆★      ┃");
-				 puts("┃                                   ┃");
-				 puts("┃     rank      id       score      ┃");
-				 puts("┃                                   ┃");
-				 printf("┃      %3d     %4s      %5s      ┃\n", i, row[0], row[1]);
-			 }
-		 }
-	puts("┃                                   ┃");
-	puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	while ((row = mysql_fetch_row(result)) != NULL) {
+		i++;
+		r++;
+		if (r != 12) {
+			gotoxy(6, 4 + r);
+			printf("%3d     %4s      %5s", i, row[0], row[1]);
+		}
+		else {
+			gotoxy(8, 18);
+			printf("아무키나 누르면 다음장.");
+			getch();
+			r = 0;
+			system("cls");
+			linesdraw(5);
+		}
+	}
 
-	system("pause");
+	gotoxy(8, 18);
+	printf("아무키나 눌러 주세요.");
+	getch();
 
 	mysql_free_result(result);
 

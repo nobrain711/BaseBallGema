@@ -17,43 +17,34 @@ void myranking(void) {
 
 	connection = mysql_real_connect(&conn, DBHOST, USER, PASSWD, DBNAME, PORT, (char*)NULL, 0);
 
-	sprintf(query, "SELECT	id, TRIM(ROUND(SUM(score)/3,2)) FROM scores GROUP BY id ORDER BY 2");
+	sprintf(query, "SELECT	id, ROUND(SUM(score)/3,2) FROM scores GROUP BY id ORDER BY 2");
 
 	mysql_query(connection, query);
 
 	result = mysql_store_result(connection);
 
 	system("cls");
+	linesdraw(5);
 
-		 puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		 puts("┃     ★☆ score  ranking ☆★      ┃");
-		 puts("┃                                   ┃");
-		 puts("┃     rank      id       score      ┃");
-		 puts("┃                                   ┃");
 		 while ((row = mysql_fetch_row(result)) != NULL) {
 			 i++;
 			 r++;
 			 if (r != 12) {
-				 printf("┃      %3d     %4s      %5s      ┃\n", i, row[0], row[1]);
+				 gotoxy(6, 4 + i);
+				 printf("%3d     %4s      %5s", i, row[0], row[1]);
 			 }
 			 else {
-				 puts("┃                                   ┃");
-				 puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+				 gotoxy(6, 4 + i);
+				 getch();
 				 r = 0;
-				 system("pause");
 				 system("cls");
-				 puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-				 puts("┃     ★☆ score  ranking ☆★      ┃");
-				 puts("┃                                   ┃");
-				 puts("┃     rank      id       score      ┃");
-				 puts("┃                                   ┃");
-				 printf("┃      %2d     %4s        %5s     ┃\n", i, row[0], row[1]);
+				 linesdraw(5);
 			 }
 		 }
-	puts("┃                                   ┃");
-	puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
 
-	system("pause");
+	gotoxy(8, 18);
+	printf("아무키나 눌러 주세요.");
+	getch();
 
 	mysql_free_result(result);
 

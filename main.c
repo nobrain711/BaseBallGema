@@ -1,5 +1,6 @@
 #include "myfunction.h"
 #include "structure.h"
+#include "DB.h"
 #include "myhear.h"
 
 int main(void) {

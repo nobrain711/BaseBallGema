@@ -27,12 +27,16 @@ void login(user* u, int* c ) {
 	if ((*c) == 2) {
 		while(1) {
 			system("cls");
-			puts("\n\n\t★☆ 회원 가입 ☆★ ");
-			printf("\n   아이디(다섯글자) : ");
+			linesdraw(0);
+			gotoxy(10, 1);
+			puts("★☆ 회원 가입 ☆★ ");
+			gotoxy(7, 3);
+			printf("아이디(다섯글자) : ");
 			fgets(u->ID, 10, stdin);
 			CHOP(u->ID);
 
-			printf("\n   비밀번호(네 글자) : ");
+			gotoxy(7, 5);
+			printf("비밀번호(네 글자) : ");
 			fgets(u->PW, 8, stdin);
 			CHOP(u->PW);
 
@@ -41,12 +45,17 @@ void login(user* u, int* c ) {
 			query_stat = mysql_query(connection, query);
 
 			if (query_stat == 0) {
+				gotoxy(7, 8);
+				puts("★☆ 회원가입 성공 ☆★");
+				Sleep(1000);
 				mysql_close(connection);
 				return;
 			}
 			else {
-				puts("\n\t아이디가 중복되었습니다.");
-				puts("\n\t다시 입력해 주세요");
+				gotoxy(8, 8);
+				puts("아이디가 중복되었습니다.");
+				gotoxy(8, 9);
+				puts("다시 입력해 주세요");
 				Sleep(1000);
 			}
 		}
@@ -55,12 +64,16 @@ void login(user* u, int* c ) {
 	else {
 		while (1) {
 			system("cls");
-			puts("\n\n\t ★☆  로그인  ☆★ ");
-			printf("\n   아이디(다섯글자) : ");
+			linesdraw(0);
+			gotoxy(10, 1);
+			puts("★☆  로그인  ☆★ ");
+			gotoxy(7, 3);
+			printf("아이디(다섯글자) : ");
 			fgets(u->ID, 10, stdin);
 			CHOP(u->ID);
 
-			printf("\n   비밀번호(네 글자) : ");
+			gotoxy(7, 5);
+			printf("비밀번호(네 글자) : ");
 			fgets(u->PW, 8, stdin);
 			CHOP(u->PW);
 
@@ -71,14 +84,17 @@ void login(user* u, int* c ) {
 			result = mysql_store_result(connection);
 
 			while ((row = mysql_fetch_row(result)) != NULL) {
-				puts("\n\t로그인 성공");
+				gotoxy(8, 8);
+				puts("★☆ 로그인 성공 ☆★");
 				Sleep(1000);
 				mysql_close(connection);
 				return;
 			}
 
-			puts("\n  아이디하고 비밀번호가 틀렸습니다.");
-			puts("\n\t다시 입력해 주세요");
+			gotoxy(3, 8);
+			puts("아이디하고 비밀번호가 틀렸습니다.");
+			gotoxy(11, 9);
+			puts("다시 입력해 주세요");
 			Sleep(1000);
 		}
 	}

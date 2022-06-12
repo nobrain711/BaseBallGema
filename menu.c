@@ -1,5 +1,5 @@
 #include "myhear.h"
-
+#include "myfunction.h"
 
 void menu(int* n) {
 	//안내문이랑 크기를 같게 설정
@@ -7,17 +7,7 @@ void menu(int* n) {
 
 	while (1) {
 		//안내문
-		puts("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
-		puts("┃     ★☆ 숫자 야구 게임 ☆★      ┃");
-		puts("┃                                   ┃");
-		puts("┃          1. 게임  시작            ┃");
-		puts("┃                                   ┃");
-		puts("┃          2. 점  수  판            ┃");
-		puts("┃                                   ┃");
-		puts("┃          3. 종      료            ┃");
-		puts("┃                                   ┃");
-		puts("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
-
+		linesdraw(2);
 		//입력 받기 위한 안내문 출력
 		printf("\n\nSelect>> ");
 		//숫자를 입력 받음

@@ -149,7 +149,6 @@
     <ClCompile Include="ballcheck.c" />
     <ClCompile Include="choicecontinue.c" />
     <ClCompile Include="compmakenum.c" />
-    <ClCompile Include="DeleteSpace.c" />
     <ClCompile Include="first.c" />
     <ClCompile Include="insertscore.c" />
     <ClCompile Include="linesdraw.c" />
@@ -157,7 +156,6 @@
     <ClCompile Include="myranking.c" />
     <ClCompile Include="outboard.c" />
     <ClCompile Include="ranking.c" />
-    <ClCompile Include="strikeballborad.c" />
     <ClCompile Include="endscreen.c" />
     <ClCompile Include="gotoxy.c" />
     <ClCompile Include="main.c" />

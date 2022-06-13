@@ -4,4 +4,3 @@
 #include <time.h>    //time
 #include <Windows.h> //gotoxy
 #include <mysql.h>	 //mysql¿¬µ¿
-#include <string.h>

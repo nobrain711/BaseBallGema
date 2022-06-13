@@ -6,7 +6,7 @@ void menu(int* n) {
 	system("mode con: cols=38 lines=20");
 
 	while (1) {
-		//안내문
+		//안내 창 출력 함수에 값 전달 후 출력
 		linesdraw(2);
 		//입력 받기 위한 안내문 출력
 		printf("\n\nSelect>> ");

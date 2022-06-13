@@ -8,7 +8,7 @@ void scoreboradchoice(user* u) {
 
 	while (1) {
 		system("cls");//시작전 화면 초기화
-		//안내문은 puts로 사용 이유는 문자열 형태로만 입력이 가능하고 자동으로 줄을 념겨주서 사용
+		//함수에 값을 넘겨서 내용 출력
 		linesdraw(3);
 		//입력받은 곳 안내문을 출력
 		printf("\n\nSelect>> ");
@@ -25,17 +25,12 @@ void scoreboradchoice(user* u) {
 		}
 
 		else {
-			switch(choice){
-			
-			case 1://점수 조회 페이지
-				ranking();
-				break;
-
-			case 2://승률 조회 페이지
-				myranking();
-				break;
-			
-			case 3://메인 메뉴로 돌려보낸다
+			if (choice != 3) {
+				//3이 아니라면 종료
+				ranking(choice);
+			}
+			else {
+				//3이면 해당 함수에서 main으로 이동
 				return;
 			}
 		}

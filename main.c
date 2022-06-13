@@ -23,7 +23,7 @@ int main(void) {
 			break;
 
 		default:
-			endscreen(u,NULL);//게임 종료
+			endscreen(u,NULL);//게임 종료 생성된 구조체 종료
 		}
 	}
 

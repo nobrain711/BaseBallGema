@@ -3,9 +3,11 @@
 #include "structure.h"
 
 void insertscore(user* u, score* s) {
+	//DB관련 변수
 	MYSQL mysql;
 	MYSQL* connection = NULL;
 	char query[255] = { 0 };
+	
 	// 초기화(생성자) : mysql_init()
 	mysql_init(&mysql);
 
@@ -15,8 +17,10 @@ void insertscore(user* u, score* s) {
 	//점수 입력
 	sprintf(query, "insert into scores (id, score) values" "('%s',%d)", u->ID, s->totalcount);
 
+	//mysql에 query연결
 	mysql_query(connection, query);
 
+	//연결 종료
 	mysql_close(connection);
 
 	//DB연결 종료 : mysql_close

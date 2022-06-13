@@ -23,6 +23,7 @@ void first(int* c) {
 			continue;
 		}
 		else if ((*c) == 3) {
+			// 종료 시 구조체 종료
 			endscreen(NULL,NULL);
 		}
 		else {

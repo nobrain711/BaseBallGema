@@ -22,21 +22,26 @@ void login(user* u, int* c ) {
 		fprintf(stderr, "error : %s", mysql_error(&conn));
 	}
 
+	//혹시 모를 enter키 제거
 	getchar();
 	
+	//first에서 넘어온 포인트 변수 c가 2면 해당 함수 출력
 	if ((*c) == 2) {
 		while(1) {
+			//화면 초기화
 			system("cls");
 			linesdraw(0);
 			gotoxy(10, 1);
 			puts("★☆ 회원 가입 ☆★ ");
 			gotoxy(7, 3);
 			printf("아이디(다섯글자) : ");
+			// 키보드로 입력 받는다
 			fgets(u->ID, 10, stdin);
 			CHOP(u->ID);
 
-			gotoxy(7, 5);
+			gotoxy(6, 5);
 			printf("비밀번호(네 글자) : ");
+			// 키보드로 입력 받는다
 			fgets(u->PW, 8, stdin);
 			CHOP(u->PW);
 
@@ -44,7 +49,7 @@ void login(user* u, int* c ) {
 
 			query_stat = mysql_query(connection, query);
 
-			if (query_stat == 0) {
+			if (query_stat == 0) { //회원가입 성공시 출력
 				gotoxy(7, 8);
 				puts("★☆ 회원가입 성공 ☆★");
 				Sleep(1000);
@@ -69,11 +74,13 @@ void login(user* u, int* c ) {
 			puts("★☆  로그인  ☆★ ");
 			gotoxy(7, 3);
 			printf("아이디(다섯글자) : ");
+			// 키보드로 입력 받는다
 			fgets(u->ID, 10, stdin);
 			CHOP(u->ID);
 
-			gotoxy(7, 5);
+			gotoxy(6, 5);
 			printf("비밀번호(네 글자) : ");
+			// 키보드로 입력 받는다
 			fgets(u->PW, 8, stdin);
 			CHOP(u->PW);
 
@@ -83,7 +90,7 @@ void login(user* u, int* c ) {
 
 			result = mysql_store_result(connection);
 
-			while ((row = mysql_fetch_row(result)) != NULL) {
+			while ((row = mysql_fetch_row(result)) != NULL) { //로그인 성공식 출력
 				gotoxy(8, 8);
 				puts("★☆ 로그인 성공 ☆★");
 				Sleep(1000);

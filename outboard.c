@@ -5,7 +5,7 @@
 
 void outboard(score* s) {
 	int x = 0, y = 0;
-	int star[3] = { 6,16 };
+	int star[2] = { 6,16 };
 	int count[COL][ROL] = {
 		{0,0,0,1,1,1,0,0,0}
 		,{0,0,1,1,1,1,1,0,0}
@@ -34,7 +34,7 @@ void outboard(score* s) {
 						gotoxy(x, y);
 						textcolor(ORED);
 						printf("бс");
-						textcolor(DARK);
+						textcolor(BAK);
 						break;
 
 					}
@@ -60,7 +60,7 @@ void outboard(score* s) {
 						gotoxy(x, y);
 						textcolor(RED);
 						printf("бс");
-						textcolor(DARK);
+						textcolor(BAK);
 						break;
 
 					}
@@ -89,7 +89,7 @@ void outboard(score* s) {
 						gotoxy(x, y);
 						textcolor(ORED);
 						printf("бс");
-						textcolor(DARK);
+						textcolor(BAK);
 						break;
 
 					}
@@ -118,7 +118,7 @@ void outboard(score* s) {
 						gotoxy(x, y);
 						textcolor(RED);
 						printf("бс");
-						textcolor(DARK);
+						textcolor(BAK);
 						break;
 
 					}

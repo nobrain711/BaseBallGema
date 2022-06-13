@@ -5,7 +5,7 @@
 
 void strikeboard(score* s) {
 	int x = 0, y = 1;
-	int star[3] = { 6,16 };
+	int star[2] = { 6,16 };
 	int count[COL][ROL] = {
 		{0,0,0,1,1,1,0,0,0}
 		,{0,0,1,1,1,1,1,0,0}

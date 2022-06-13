@@ -37,6 +37,9 @@
     <Filter Include="소스 파일\ranking">
       <UniqueIdentifier>{8f819122-8453-407b-afd0-8bcf70f94a45}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ballcountboard">
+      <UniqueIdentifier>{99c49d46-9278-4b49-8b7a-07b772884523}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myhear.h">
@@ -86,9 +89,6 @@
     <ClCompile Include="gotoxy.c">
       <Filter>소스 파일\print</Filter>
     </ClCompile>
-    <ClCompile Include="strikeballborad.c">
-      <Filter>소스 파일\scoreborad</Filter>
-    </ClCompile>
     <ClCompile Include="textcolor.c">
       <Filter>소스 파일\print</Filter>
     </ClCompile>
@@ -113,20 +113,17 @@
     <ClCompile Include="choicecontinue.c">
       <Filter>소스 파일\game</Filter>
     </ClCompile>
-    <ClCompile Include="ballboard.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="strikeboard.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="outboard.c">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\ballcountboard</Filter>
     </ClCompile>
-    <ClCompile Include="DeleteSpace.c">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="ballboard.c">
+      <Filter>소스 파일\ballcountboard</Filter>
     </ClCompile>
     <ClCompile Include="linesdraw.c">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\print</Filter>
+    </ClCompile>
+    <ClCompile Include="strikeboard.c">
+      <Filter>소스 파일\ballcountboard</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
